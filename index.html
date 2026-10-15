@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AXYS — Visual Direction v1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="deck">
+
+  <!-- ============ Deck nav ============ -->
+  <div class="deck-nav">
+    <span class="logo" data-logo>AXYS</span>
+    <nav>
+      <a href="#screens">01 Screens</a>
+      <a href="#brand">02 Brand</a>
+      <a href="#interaction">03 Interaction</a>
+    </nav>
+  </div>
+
+  <!-- ============ 01 Screens ============ -->
+  <section class="sec sec-top" id="screens">
+    <div class="sec-head">
+      <span class="num">01</span><h2>Screens</h2>
+      <p>All screens are live. The hamburger menu and battery are permanent on every screen. Hints in blue show what to try.</p>
+    </div>
+
+    <div class="phones">
+
+      <!-- ===== 01 SYSTEM ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="system">
+          <div class="content">
+            <div class="page-head"><h1>System</h1><span class="status-pill" id="sys-pill"><i class="dot"></i><span>All systems ready</span></span></div>
+
+            <div class="card sensor-card" id="sensor-card">
+              <div class="row between">
+                <span class="eyebrow">Sensor network</span>
+                <button class="ble-toggle" id="ble-toggle"><i data-icon="bluetooth"></i><span>Connected</span></button>
+              </div>
+              <svg class="sensor-map" id="sensor-map" viewBox="0 0 200 260"></svg>
+              <div class="sensor-legend" id="sensor-legend"></div>
+              <button class="btn btn-primary reconnect" id="reconnect"><i data-icon="bluetooth"></i>Reconnect sensors</button>
+            </div>
+
+            <div class="card fw-card" id="fw-card">
+              <div class="fw-top">
+                <div class="ico-tile amber" id="fw-ico"><i data-icon="chip"></i></div>
+                <div class="txt"><b>Firmware</b><span id="fw-ver">v2.3.1 installed</span></div>
+                <span class="badge amber" id="fw-badge">v2.4.0 ready</span>
+              </div>
+              <div class="fw-progress"><i id="fw-bar"></i></div>
+              <button class="btn btn-primary" id="fw-btn"><i data-icon="download"></i>Update now</button>
+            </div>
+
+            <div class="grid2">
+              <div class="card stat-tile">
+                <div class="lbl"><span class="eyebrow">Battery</span></div>
+                <div class="row">
+                  <div class="mini-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#1c242b" stroke-width="6"/><circle cx="32" cy="32" r="27" fill="none" stroke="#c8ff2e" stroke-width="6" stroke-linecap="round" stroke-dasharray="139 170"/></svg><div class="v">82<small style="font-size:10px">%</small></div></div>
+                </div>
+                <span class="sub">≈ 6h 20m training left</span>
+              </div>
+              <div class="card stat-tile">
+                <div class="lbl"><span class="eyebrow">Calibration</span></div>
+                <div class="row">
+                  <div class="mini-ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="#c8ff2e" stroke-width="6" stroke-opacity=".9"/></svg><div class="v"><i data-icon="check"></i></div></div>
+                </div>
+                <button class="link-btn">Calibrated 2h ago · Redo <i data-icon="chevron"></i></button>
+              </div>
+            </div>
+
+            <div class="card cam-card" id="cam-card">
+              <div class="row between">
+                <div class="row"><div class="ico-tile"><i data-icon="camera"></i></div><div><b class="k">Phone camera</b><div class="muted" style="font-size:12px" id="cam-sub">Recording · 240 fps</div></div></div>
+                <button class="switch on" id="cam-switch" aria-label="Camera"></button>
+              </div>
+              <div class="viewfinder" id="viewfinder">
+                <div class="guide"></div>
+                <svg class="vf-fig fig-svg" viewBox="0 0 200 280" id="vf-svg"></svg>
+                <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
+                <span class="rec">REC</span>
+                <svg class="tilt" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 38V10M14 20l10-10 10 10"/></svg>
+                <div class="hint"><span id="cam-hint"><i data-icon="check"></i>Position correct</span></div>
+                <div class="off"><div><i data-icon="camera"></i>Camera off<br/>Sensors only mode</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">01</span><div><b>System</b><span>Sensor network diagram (master → slaves), firmware, battery, camera framing, calibration. <span class="try">Try: tap the Bluetooth chip, the camera preview, and "Update now".</span></span></div></div>
+      </div>
+
+      <!-- ===== 02 PROFILE ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="profile">
+          <div class="content">
+            <div class="prof-head" style="position:relative">
+              <button class="icon-btn edit-fab" aria-label="Edit"><i data-icon="edit"></i></button>
+              <div class="av">
+                <svg class="ring" viewBox="0 0 96 96"><circle cx="48" cy="48" r="46" fill="none" stroke="#1c242b" stroke-width="3"/><circle cx="48" cy="48" r="46" fill="none" stroke="url(#streakGrad)" stroke-width="3" stroke-linecap="round" stroke-dasharray="128 289"/></svg>
+                <div class="photo" id="photo"></div>
+                <span class="flame"><i data-icon="flame"></i>12</span>
+              </div>
+              <h2>Jordan Ellis</h2>
+              <span class="mail"><i data-icon="mail"></i>jordan.ellis@mail.com</span>
+            </div>
+
+            <div class="card member-card">
+              <div class="row between">
+                <div><span class="eyebrow">Membership</span><div class="tier">STANDARD</div></div>
+                <span class="since"><i data-icon="calendar"></i>Since Mar 2025</span>
+              </div>
+              <div class="perks">
+                <div class="perk"><i data-icon="activity"></i>3D replay<i class="lk" data-icon="lock"></i></div>
+                <div class="perk"><i data-icon="video"></i>Pro drills<i class="lk" data-icon="lock"></i></div>
+                <div class="perk"><i data-icon="chart"></i>Deep stats<i class="lk" data-icon="lock"></i></div>
+              </div>
+              <button class="btn btn-pro"><i data-icon="crown"></i>Upgrade to Pro</button>
+            </div>
+
+            <div class="grid2">
+              <div class="card attr">
+                <span class="eyebrow">Handed</span>
+                <div class="seg" id="hand-seg">
+                  <button data-h="L"><i data-icon="hand" style="transform:scaleX(-1)"></i>L</button>
+                  <button data-h="R" class="on"><i data-icon="hand"></i>R</button>
+                </div>
+              </div>
+              <div class="card attr">
+                <span class="eyebrow">Handicap</span>
+                <div class="big">18 <small><i data-icon="arrowup"></i>2.4</small></div>
+              </div>
+            </div>
+
+            <div class="grid2">
+              <div class="card stat"><span class="l"><i data-icon="activity"></i>Total swings</span><span class="v">4,286</span>
+                <svg class="spark" viewBox="0 0 120 26" preserveAspectRatio="none"><path d="M0 22 L15 18 L30 20 L45 13 L60 15 L75 9 L90 11 L105 5 L120 3" fill="none" stroke="#2ee6ff" stroke-width="2"/></svg></div>
+              <div class="card stat"><span class="l"><i data-icon="clock"></i>Training time</span><span class="v">62<small>h</small> 14<small>m</small></span>
+                <div class="hcp-bar"><i style="height:40%"></i><i style="height:65%"></i><i style="height:30%"></i><i style="height:80%"></i><i style="height:55%"></i><i class="on" style="height:100%"></i><i class="on" style="height:70%"></i></div></div>
+            </div>
+
+            <div class="card streak">
+              <div class="row between">
+                <div><span class="eyebrow">Current streak</span><div class="k" style="font-size:26px;margin-top:4px">12 <span class="muted" style="font-size:14px;font-weight:500">days</span></div></div>
+                <div style="text-align:right"><span class="eyebrow">Record</span><div class="k" style="font-size:26px;margin-top:4px;color:var(--amber)">27</div></div>
+              </div>
+              <div class="days">
+                <div class="d on"><b><i data-icon="flame"></i></b>M</div>
+                <div class="d on"><b><i data-icon="flame"></i></b>T</div>
+                <div class="d on"><b><i data-icon="flame"></i></b>W</div>
+                <div class="d today"><b><i data-icon="flame"></i></b>T</div>
+                <div class="d"><b></b>F</div>
+                <div class="d"><b></b>S</div>
+                <div class="d"><b></b>S</div>
+              </div>
+              <div class="row between muted" style="font-size:11px"><span>15 days to beat your record</span><span>12 / 27</span></div>
+              <div class="rec-bar"><i></i><span class="trophy"><i data-icon="trophy"></i></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">02</span><div><b>Personal profile</b><span>Streak lives on the avatar ring. Membership card upsells Pro with locked-feature visuals. <span class="try">Try: switch Handed L / R.</span></span></div></div>
+      </div>
+
+      <!-- ===== 03 CALIBRATION ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="calibration">
+          <div class="content">
+            <div class="steps" id="calib-steps"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+            <span class="eyebrow" id="calib-eyebrow">Step 1 of 3</span>
+            <h2 class="title" id="calib-title">Stand tall</h2>
+            <div class="stage" id="calib-stage">
+              <div class="floor"></div>
+              <svg class="fig-svg" viewBox="0 0 200 280" id="calib-svg"></svg>
+              <div class="legend"><span class="lg-ghost">Target</span><span class="lg-you">You</span></div>
+              <div class="match"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="30" fill="none" stroke="#1c242b" stroke-width="5"/><circle id="match-arc" cx="35" cy="35" r="30" fill="none" stroke="#ffb020" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 189"/></svg><div class="v"><div><span id="match-v">0</span>%<small>MATCH</small></div></div></div>
+              <div class="haptic" id="haptic"><i data-icon="haptic"></i>Haptic</div>
+              <div class="lock-flash" id="lock-flash"></div>
+            </div>
+            <div class="vo"><span class="spk"><i data-icon="speaker"></i></span><div class="wave"><i></i><i></i><i></i><i></i><i></i></div><p class="caption" id="calib-cap">Stand tall, feet shoulder-width apart, arms relaxed.</p></div>
+            <button class="btn btn-ghost" style="margin-top:6px" id="calib-skip">Restart calibration</button>
+
+            <div class="calib-done" id="calib-done">
+              <div class="badge-big"><i data-icon="check"></i></div>
+              <h3>You're calibrated</h3>
+              <p>All 4 sensors are locked to your body.<br/>Let's train.</p>
+              <div class="chips"><span class="badge volt">Posture ✓</span><span class="badge volt">T-pose ✓</span><span class="badge volt">Address ✓</span></div>
+              <button class="btn btn-primary">Start training</button>
+              <button class="btn btn-ghost" id="calib-replay">Replay calibration</button>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">03</span><div><b>Calibration</b><span>Your avatar (amber joints) moves into the ghost target. When matched, joints turn volt, the frame flashes and a haptic tick fires. Runs automatically.</span></div></div>
+      </div>
+
+      <!-- ===== 04 DRILL ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="drills">
+          <div class="content">
+            <span class="eyebrow">Real-time drill · 04 / 12</span>
+            <h2 class="title">Arm &amp; Torso Separation</h2>
+            <div class="stage">
+              <div class="floor"></div>
+              <svg class="fig-svg" viewBox="0 0 200 280" id="drill-svg"></svg>
+              <div class="dial-key"><span>Shoulders</span><span class="h">Hips</span></div>
+              <div class="dial">
+                <svg viewBox="0 0 80 80" id="dial-svg"></svg>
+                <div class="xf"><span id="xf">0</span>°</div>
+                <div class="xl">SEPARATION</div>
+              </div>
+              <span class="phase-tag" id="drill-phase">Address</span>
+              <span class="speed-tag" id="drill-speed">75% tempo</span>
+            </div>
+            <div class="vo"><span class="spk"><i data-icon="speaker"></i></span><div class="wave"><i></i><i></i><i></i><i></i><i></i></div><p class="caption" id="drill-cap">Keep your hips quiet as your shoulders turn.</p></div>
+
+            <div class="card ctrl" style="margin-top:12px">
+              <div>
+                <div class="lab"><span>Reps</span></div>
+                <div class="row" style="margin-top:8px">
+                  <div class="stepper">
+                    <button class="icon-btn" id="rep-minus"><i data-icon="minus"></i></button>
+                    <span class="val" id="rep-v">10</span>
+                    <button class="icon-btn" id="rep-plus"><i data-icon="plus"></i></button>
+                  </div>
+                  <div class="rep-dots" id="rep-dots"></div>
+                </div>
+              </div>
+              <div>
+                <div class="lab"><span>Tempo speed</span><b id="tempo-v">75%</b></div>
+                <div class="tempo" id="tempo">
+                  <div class="track"></div><div class="fill" id="tempo-fill"></div>
+                  <input type="range" min="25" max="100" step="5" value="75" id="tempo-in" />
+                  <div class="knob" id="tempo-knob"></div>
+                </div>
+                <div class="tempo-marks"><span>25%</span><span>Slow-mo</span><span>Full</span><span>100%</span></div>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="margin-top:12px"><i data-icon="play"></i>Start drill</button>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">04</span><div><b>Real-time drill</b><span>Demo avatar with a top-down rotation dial that visualises shoulder-vs-hip separation. <span class="try">Try: drag tempo speed (changes the avatar speed) and change reps.</span></span></div></div>
+      </div>
+
+      <!-- ===== 05 SHOT TAKING ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="training">
+          <div class="content">
+            <div class="row between" style="margin-top:4px">
+              <div><span class="eyebrow">Arm &amp; Torso Separation</span><h2 class="title">Take your shots</h2></div>
+            </div>
+            <div class="row between" style="margin-top:10px">
+              <span class="muted" style="font-size:12px">Set <b class="k" style="color:var(--text)">2</b> of 3</span>
+              <div class="set-dots"><i class="done"></i><i class="cur"></i><i></i></div>
+            </div>
+            <div class="shot-ring" id="shot-ring">
+              <svg viewBox="0 0 260 260" id="shot-svg"></svg>
+              <div class="burst"></div>
+              <div class="center"><div class="n"><span id="shot-n">3</span><small>/10</small></div><div class="lbl" id="shot-lbl">Shots registered</div></div>
+            </div>
+            <div class="listening"><span class="live"></span><span id="listen-txt">Listening for your swing…</span></div>
+            <svg class="live-wave" viewBox="0 0 320 54" preserveAspectRatio="none"><defs><linearGradient id="lwg" x1="0" x2="1"><stop offset="0" stop-color="#2ee6ff" stop-opacity="0"/><stop offset=".7" stop-color="#2ee6ff"/><stop offset="1" stop-color="#c8ff2e"/></linearGradient></defs><path id="live-path" fill="none" stroke="url(#lwg)" stroke-width="2" stroke-linejoin="round"/></svg>
+            <div class="card metrics">
+              <div><b id="m-speed">94</b><span>Club mph</span></div>
+              <div><b id="m-tempo">3.0:1</b><span>Tempo</span></div>
+              <div><b id="m-sep">41°</b><span>Separation</span></div>
+            </div>
+            <div class="shot-log" id="shot-log"></div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">05</span><div><b>Shot taking</b><span>A segmented ring fills shot by shot; the live sensor trace spikes on impact. Simulated swing every few seconds.</span></div></div>
+      </div>
+
+      <!-- ===== 06 SHOTS COMPLETE ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="training">
+          <div class="content">
+            <div class="done-hero">
+              <div class="ring">
+                <svg viewBox="0 0 116 116"><circle cx="58" cy="58" r="55" fill="none" stroke="#c8ff2e" stroke-width="1.5" stroke-dasharray="2 7" opacity=".7"/></svg>
+                <div class="core"><i data-icon="check"></i></div>
+              </div>
+              <h2>Set complete</h2>
+              <p>10 / 10 shots · Arm &amp; Torso Separation</p>
+            </div>
+            <div class="sum">
+              <div><b>95</b><span>Avg mph</span></div>
+              <div><b>3.0:1</b><span>Tempo</span></div>
+              <div><b style="color:var(--volt)">82</b><span>Score</span></div>
+            </div>
+
+            <div class="card verdict good">
+              <div class="gfx">
+                <svg viewBox="0 0 96 72">
+                  <line x1="4" y1="30" x2="92" y2="30" stroke="#c8ff2e" stroke-dasharray="3 3" stroke-opacity=".5"/>
+                  <g fill="#c8ff2e">
+                    <rect class="grow" x="6" y="31" width="6" height="35" rx="2" style="animation-delay:.05s"/>
+                    <rect class="grow" x="15" y="29" width="6" height="37" rx="2" style="animation-delay:.1s"/>
+                    <rect class="grow" x="24" y="32" width="6" height="34" rx="2" style="animation-delay:.15s"/>
+                    <rect class="grow" x="33" y="30" width="6" height="36" rx="2" style="animation-delay:.2s"/>
+                    <rect class="grow" x="42" y="28" width="6" height="38" rx="2" style="animation-delay:.25s"/>
+                    <rect class="grow" x="51" y="31" width="6" height="35" rx="2" style="animation-delay:.3s"/>
+                    <rect class="grow" x="60" y="30" width="6" height="36" rx="2" style="animation-delay:.35s"/>
+                    <rect class="grow" x="69" y="29" width="6" height="37" rx="2" style="animation-delay:.4s"/>
+                    <rect class="grow" x="78" y="31" width="6" height="35" rx="2" style="animation-delay:.45s"/>
+                    <rect class="grow" x="87" y="30" width="6" height="36" rx="2" style="animation-delay:.5s"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="txt"><span class="eyebrow"><i data-icon="trophy"></i>Main strength</span><b>Tempo consistency</b><p>3.0 : 1 on every swing. Only ±4% variation.</p></div>
+            </div>
+
+            <div class="card verdict bad">
+              <div class="gfx">
+                <svg viewBox="0 0 96 72" fill="none" stroke-linecap="round">
+                  <line x1="10" y1="66" x2="86" y2="10" stroke="#2ee6ff" stroke-opacity=".35" stroke-dasharray="3 3"/>
+                  <path d="M14 64 C 30 40, 50 22, 84 8" stroke="#2ee6ff" stroke-width="2" stroke-opacity=".6"/>
+                  <path class="draw" d="M84 8 C 70 4, 46 6, 38 24 C 32 38, 24 52, 14 64" stroke="#ff4d5e" stroke-width="2.5"/>
+                  <circle cx="40" cy="20" r="4" fill="#ff4d5e"/>
+                  <circle cx="40" cy="20" r="8" stroke="#ff4d5e" stroke-opacity=".4"/>
+                </svg>
+              </div>
+              <div class="txt"><span class="eyebrow"><i data-icon="alert"></i>Main weakness</span><b>Over the top</b><p>Club came outside the plane on 7 of 10 swings.</p></div>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary"><i data-icon="activity"></i>View swing overview</button>
+              <button class="btn btn-secondary"><i data-icon="refresh"></i>Next set (3 of 3)</button>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">06</span><div><b>Shots complete</b><span>One strength, one weakness, each as a micro-graphic: consistent bars for tempo, a red off-plane path for the fault.</span></div></div>
+      </div>
+
+      <!-- ===== 07 OVERVIEW ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="history">
+          <div class="content">
+            <div class="row between"><div><span class="eyebrow">Swing 7 · Set 2</span><h2 class="title">Swing overview</h2></div></div>
+            <div class="stage ov-stage">
+              <div class="floor"></div>
+              <svg class="fig-svg" viewBox="0 0 200 280" id="ov-svg">
+                <defs><linearGradient id="trailGrad" x1="0" x2="1" y1="1" y2="0"><stop offset="0" stop-color="#2ee6ff" stop-opacity=".1"/><stop offset="1" stop-color="#2ee6ff"/></linearGradient></defs>
+              </svg>
+              <div class="ideal-t">Ideal ghost <button class="switch" id="ideal-switch"></button></div>
+              <span class="ts" id="ov-ts">0.00s</span>
+            </div>
+            <div class="phase-name"><b id="ov-phase">Address</b><span id="ov-idx">1 / 6</span></div>
+            <div class="scrub" id="scrub">
+              <div class="track"></div><div class="prog" id="scrub-prog"></div>
+              <input type="range" min="0" max="1000" value="0" id="scrub-in" />
+              <div class="knob" id="scrub-knob"></div>
+            </div>
+            <div class="phase-chips" id="phase-chips"></div>
+            <div class="player">
+              <button class="play" id="ov-play"><i data-icon="play"></i></button>
+              <div class="seg" id="ov-speed"><button data-s=".25">0.25×</button><button data-s=".5" class="on">0.5×</button><button data-s="1">1×</button></div>
+            </div>
+            <div class="card fault" id="fault">
+              <div class="row between"><b id="f-title">Solid setup</b><span class="badge volt" id="f-badge">On target</span></div>
+              <p id="f-desc">Spine tilt and ball position within your ideal range.</p>
+              <button class="btn btn-secondary btn-sm cta" style="width:100%"><i data-icon="video"></i>Watch the fix · 2:14</button>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">07</span><div><b>Overview</b><span>Replay avatar with club-path trail. Faults are marked on the scrubber; the card below explains the current phase. <span class="try">Try: drag the scrubber, tap phases, turn on "Ideal ghost".</span></span></div></div>
+      </div>
+
+      <!-- ===== 08 EXPLAINER ===== -->
+      <div class="phone-wrap">
+        <div class="phone" data-nav="academy">
+          <div class="content">
+            <span class="eyebrow">AXYS Academy · Fix</span>
+            <h2 class="title">Stop coming over the top</h2>
+            <div class="video" id="video">
+              <svg class="plane-lines" viewBox="0 0 330 230" preserveAspectRatio="none"><line x1="30" y1="230" x2="250" y2="20" stroke="#2ee6ff" stroke-opacity=".35" stroke-dasharray="5 5"/><line x1="30" y1="230" x2="300" y2="70" stroke="#ff4d5e" stroke-opacity=".35" stroke-dasharray="5 5"/></svg>
+              <svg class="fig-svg" viewBox="0 0 200 280" id="vid-svg"></svg>
+              <span class="vtag"><i data-icon="video"></i>EXPLAINER</span>
+              <div class="vpause" id="vpause"></div>
+              <button class="big-play" id="big-play"><i data-icon="play"></i></button>
+              <p class="cc" id="vid-cc">Start the downswing from the ground up…</p>
+              <span class="dur" id="vid-dur">2:14</span>
+              <div class="vbar"><i id="vid-bar"></i></div>
+            </div>
+            <div class="vmeta">
+              <span><i data-icon="clock"></i>2:14</span>
+              <span><i data-icon="activity"></i>Fixes: Over the top</span>
+              <span><i data-icon="target"></i>Leads to drill 04</span>
+            </div>
+            <div class="chapters" id="chapters">
+              <div class="chapter" data-at="0"><span class="t">0:00</span><div><b>What "over the top" looks like</b><span>Spot it in your replay</span></div><i class="ck" data-icon="check"></i></div>
+              <div class="chapter" data-at="0.34"><span class="t">0:46</span><div><b>Hips start, shoulders wait</b><span>The separation feel</span></div><i class="ck" data-icon="check"></i></div>
+              <div class="chapter" data-at="0.7"><span class="t">1:34</span><div><b>Your drill, step by step</b><span>Arm &amp; Torso Separation</span></div><i class="ck" data-icon="check"></i></div>
+            </div>
+            <div class="drill-cta">
+              <button class="btn btn-primary" id="to-drill" disabled><i data-icon="lock"></i>Go to drill</button>
+              <span class="note" id="drill-note"><i data-icon="lock"></i>Unlocks after the video</span>
+            </div>
+          </div>
+        </div>
+        <div class="phone-cap"><span class="n">08</span><div><b>Explainer video</b><span>Preview still, title, chapters. The drill button stays locked until the video has been watched, then unlocks with a glow. <span class="try">Try: press play.</span></span></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Visual direction · v1 · Concept</span>
+      <h1 style="margin-top:18px">Every swing,<br/>on <em>axis.</em></h1>
+    </div>
+    <div>
+      <p>A dark, precision-instrument interface. Volt green marks performance and "go", cyan marks live sensor data. The body is always the hero: avatars, joints and signal lines replace paragraphs wherever possible.</p>
+      <div class="kv">
+        <div><b>8</b><span>Screens</span></div>
+        <div><b>5</b><span>Button states</span></div>
+        <div><b>Live</b><span>Prototype</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 Brand ============ -->
+  <section class="sec" id="brand">
+    <div class="sec-head">
+      <span class="num">02</span><h2>Palette &amp; type</h2>
+      <p>Built out from a carbon base with two energy accents. Status colours are reserved strictly for feedback.</p>
+    </div>
+    <div class="palette">
+      <div class="swatch"><div class="chip" style="background:#07090b"></div><div class="meta"><b>Carbon</b><span>#07090B</span><small>Base / background</small></div></div>
+      <div class="swatch"><div class="chip ramp"><div style="background:#0e1216"></div><div style="background:#151b20"></div><div style="background:#1c242b"></div></div><div class="meta"><b>Graphite</b><span>#0E1216 · #151B20 · #1C242B</span><small>Surfaces 1–3</small></div></div>
+      <div class="swatch"><div class="chip" style="background:#c8ff2e"></div><div class="meta"><b>Volt</b><span>#C8FF2E</span><small>Primary action · success · performance</small></div></div>
+      <div class="swatch"><div class="chip" style="background:#2ee6ff"></div><div class="meta"><b>Signal</b><span>#2EE6FF</span><small>Live sensor data · ghost avatar</small></div></div>
+      <div class="swatch"><div class="chip ramp"><div style="background:#ffb020"></div><div style="background:#ff4d5e"></div></div><div class="meta"><b>Amber / Fault</b><span>#FFB020 · #FF4D5E</span><small>Warning · swing fault</small></div></div>
+      <div class="swatch"><div class="chip" style="background:linear-gradient(100deg,#c8ff2e,#2ee6ff)"></div><div class="meta"><b>Pro gradient</b><span>Volt → Signal</span><small>Membership / premium only</small></div></div>
+    </div>
+    <div class="type-row">
+      <div class="type-card"><div class="big">Aa</div><div class="label">Space Grotesk — headings &amp; numerals. Engineered, slightly technical.</div></div>
+      <div class="type-card"><div class="big" style="font-family:var(--f-body);font-weight:500">Aa</div><div class="label">Inter — body &amp; UI labels. Neutral, highly legible at small sizes.</div></div>
+      <div class="type-card"><div class="mono">94.2 mph</div><div class="label">JetBrains Mono — live telemetry, timestamps, versions.</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 03 Interaction ============ -->
+  <section class="sec" id="interaction">
+    <div class="sec-head">
+      <span class="num">03</span><h2>Pressed state: Compress · Charge · Pulse</h2>
+      <p>Pressing a button should feel like a sensor firing. Try them below; every button in the screens behaves the same way.</p>
+    </div>
+    <div class="states">
+      <div class="state-board">
+        <div class="state-grid">
+          <span></span><span class="h">Default</span><span class="h">Pressed</span><span class="h">Disabled</span><span class="h">Loading</span><span class="h">Success</span>
+          <span class="h">Primary</span>
+          <button class="btn btn-primary">Start</button>
+          <button class="btn btn-primary is-pressed static">Start</button>
+          <button class="btn btn-primary" disabled><i data-icon="lock"></i>Start</button>
+          <button class="btn btn-primary is-loading">Start</button>
+          <button class="btn is-success"><i data-icon="check"></i>Done</button>
+          <span class="h">Secondary</span>
+          <button class="btn btn-secondary">Replay</button>
+          <button class="btn btn-secondary is-pressed static">Replay</button>
+          <button class="btn btn-secondary" disabled>Replay</button>
+          <button class="btn btn-secondary is-loading">Replay</button>
+          <button class="btn is-success"><i data-icon="check"></i>Saved</button>
+          <span class="h">Premium</span>
+          <button class="btn btn-pro">Go Pro</button>
+          <button class="btn btn-pro is-pressed static">Go Pro</button>
+          <button class="btn btn-pro" disabled>Go Pro</button>
+          <button class="btn btn-pro is-loading">Go Pro</button>
+          <button class="btn is-success"><i data-icon="crown"></i>Pro</button>
+        </div>
+      </div>
+      <div class="press-anatomy">
+        <h3>Anatomy of a press</h3>
+        <div class="press-steps">
+          <div class="press-step"><div class="ill"><div class="ill-btn compress"></div></div><b>Compress</b><span>Scales to 96.5% with a spring</span></div>
+          <div class="press-step"><div class="ill"><div class="ill-btn charge"></div></div><b>Charge</b><span>Inner shadow + outer glow</span></div>
+          <div class="press-step"><div class="ill"><div class="ill-btn ill-pulse"></div></div><b>Pulse</b><span>Signal ring from touch point + haptic tick</span></div>
+        </div>
+        <div class="timing"><span>0ms</span><div class="bar"></div><span>600ms</span></div>
+        <div class="try-zone">
+          <button class="btn btn-primary">Press me</button>
+          <button class="btn btn-secondary">Or me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="streakGrad" x1="0" x2="1"><stop offset="0" stop-color="#ff7a20"/><stop offset="1" stop-color="#ffb020"/></linearGradient>
+    <linearGradient id="figGrad" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="130" y2="260"><stop offset="0" stop-color="#f6f9fb"/><stop offset=".45" stop-color="#cdd7dd"/><stop offset="1" stop-color="#7d8b94"/></linearGradient>
+    <radialGradient id="figShadow"><stop offset="0" stop-color="#000" stop-opacity=".7"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+
+<script src="app.js"></script>
+</body>
+</html>
